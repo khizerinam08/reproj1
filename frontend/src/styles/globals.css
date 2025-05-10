@@ -1,0 +1,69 @@
+/* Custom styles beyond Tailwind */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0C0E16] text-white;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1B23;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2E2F3E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B982FF;
+}
+
+/* Animation utilities */
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Typography adjustments */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Custom gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, #18C8FF 0%, #933FFE 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Button styles */
+.btn-gradient {
+  @apply bg-gradient-to-r from-[#18C8FF] to-[#933FFE] text-white font-semibold 
+         py-3 px-8 rounded-lg hover:opacity-90 transition-opacity 
+         border border-[rgba(255,255,255,0.4)];
+}
+
+/* Glassmorphism effect */
+.glass {
+  @apply bg-white bg-opacity-5 backdrop-blur-sm border border-white/10 rounded-lg;
+} 
