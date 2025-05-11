@@ -79,7 +79,7 @@ frontend/
 4. Create authentication service
 5. Implement protected routes
 6. Build user context provider
-7. Add persistent login with localStorage/cookies
+7. Add persistent login with MongoDB
 8. Create account recovery flow (forgot password)
 
 **Deliverable**: Functional authentication system that allows users to create accounts and log in.

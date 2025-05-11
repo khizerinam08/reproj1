@@ -2,37 +2,29 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html",
   ],
   theme: {
     extend: {
       colors: {
-        // Main colors from Figma design
-        text: '#FFFFFF',
-        background: '#0C0E16',
-        card: '#1A1B23',
-        border: '#2E2F3E',
-        muted: '#898CA9',
+        // Main colors from specified scheme
+        text: '#ffffff',
+        background: '#000000',
+        primary: '#bc2424',
+        secondary: '#e2e2e2',
+        accent: '#bc2424',
         
-        // Gradient colors
-        primary: {
-          from: '#18C8FF',
-          to: '#933FFE',
-          DEFAULT: '#933FFE',
-        },
-        
-        // Accent colors
-        accent: '#B982FF',
+        // Additional UI colors
+        card: '#141414',
+        border: '#333333',
         
         // Semantic colors
-        success: '#2DE100',
-        warning: '#FFB800',
-        error: '#F03738',
+        success: '#4CAF50',
+        warning: '#FFC107',
+        error: '#F44336',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-      },
-      backgroundImage: {
-        'gradient-primary': 'linear-gradient(90deg, #18C8FF 0%, #933FFE 100%)',
       },
     },
   },

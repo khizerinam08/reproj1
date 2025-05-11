@@ -1,58 +1,84 @@
-# Dependencies
+# Node.js dependencies
 node_modules/
-/.pnp
-.pnp.js
-
-# Testing
-/coverage
-
-# Production builds
-/build
-/dist
-frontend/build/
-frontend/dist/
-
-# ML Models (large files)
-*.pkl
-*.h5
-*.model
-models/
-
-# Environment
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-logs
-*.log
+.pnp/
+.pnp.js
 
-# Editor/IDE files
-.idea/
-.vscode/
-*.swp
-*.swo
-.DS_Store
+# Environment variables
+.env
 .env.local
+.env.development
+.env.test
+.env.production
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Cache
+# Build outputs
+/build/
+/dist/
+/out/
+frontend/build/
+frontend/dist/
+
+# Testing
+/coverage/
+/.nyc_output/
+
+# IDE and editors
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*.sublime-*
+.project
+.classpath
+.settings/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Debug logs
+logs/
+*.log
+
+# ML and data files
+*.pkl
+*.h5
+*.model
+*.csv
+*.json.gz
+models/
+
+# Cache and temporary files
 .cache/
 .parcel-cache/
 .eslintcache
 .npm
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Temporary files
+.temp/
+.tmp/
 *.tmp
 *.temp
+
+# Uploads and user-generated content
+/uploads/
+/public/uploads/
+
+# Secrets and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# Package lock files (optional, depends on team preference)
+# package-lock.json
+# yarn.lock

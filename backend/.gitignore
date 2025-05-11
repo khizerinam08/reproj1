@@ -1,0 +1,38 @@
+# Dependencies
+/node_modules
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Uploads/generated content
+/uploads
+/public/uploads
+
+# ML models and data
+/models
+/data
+*.pkl
+*.h5
+*.model
+*.csv
+*.json.gz
+
+# Misc
+.DS_Store
+.vscode/
+.idea/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory
+coverage/
+.nyc_output/ 

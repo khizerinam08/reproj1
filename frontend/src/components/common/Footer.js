@@ -3,95 +3,51 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0C0E16] border-t border-[#1A1B23] py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
-          {/* Column 1 - Logo and Subscribe */}
-          <div className="col-span-2 space-y-6">
+    <footer className="bg-black border-t border-[#1c1c1c] py-16 relative overflow-hidden">
+      {/* Texture overlay */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-10"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 text-center md:text-left">
+          {/* Column 1 - Project Description */}
+          <div className="col-span-1 space-y-6 flex flex-col items-center md:items-start">
             <Link to="/" className="flex items-center">
-              <img src="/assets/logo.svg" alt="Logo" className="h-8 w-auto" />
-              <span className="ml-3 text-xl font-bold text-white">CrimeSafe</span>
+              <span className="text-xl font-bold tracking-wider text-white">CrimeFinder</span>
             </Link>
-            <p className="text-[#898CA9] text-sm max-w-xs">
-              Helping you navigate your city safely, powered by real-time crime prediction data.
+            <p className="text-[#e2e2e2] text-sm max-w-xs">
+              A data visualization project for crime statistics analysis. Developed as part of a college assignment in data science and web development.
             </p>
-            <div className="space-y-4">
-              <h4 className="text-white font-medium">Stay up to date</h4>
-              <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
-                  className="bg-[#1A1B23] border border-[#2E2F3E] rounded-lg py-3 px-4 text-white focus:outline-none focus:border-[#B982FF] flex-grow"
-                />
-                <button className="bg-gradient-to-r from-[#18C8FF] to-[#933FFE] rounded-lg py-3 px-6 text-white font-medium hover:opacity-90 transition-opacity">
-                  Subscribe
-                </button>
-              </div>
-            </div>
           </div>
           
-          {/* Column 2 - Company */}
-          <div className="space-y-6">
-            <h3 className="text-white font-bold text-lg">Company</h3>
-            <ul className="space-y-4 text-[#898CA9]">
-              <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-              <li><Link to="/press" className="hover:text-white transition-colors">Press</Link></li>
-              <li><Link to="/news" className="hover:text-white transition-colors">News</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+          {/* Column 2 - About Project */}
+          <div className="space-y-6 flex flex-col items-center md:items-start">
+            <h3 className="text-white font-bold text-lg">About Project</h3>
+            <ul className="space-y-4 text-[#e2e2e2] text-center md:text-left">
+              <li><Link to="/methodology" className="hover:text-[#bc2424] transition-colors">Methodology</Link></li>
+              <li><Link to="/data-sources" className="hover:text-[#bc2424] transition-colors">Data Sources</Link></li>
+              <li><Link to="/tech-stack" className="hover:text-[#bc2424] transition-colors">Tech Stack</Link></li>
+              <li><Link to="/documentation" className="hover:text-[#bc2424] transition-colors">Documentation</Link></li>
             </ul>
           </div>
           
-          {/* Column 3 - Resources */}
-          <div className="space-y-6">
-            <h3 className="text-white font-bold text-lg">Resources</h3>
-            <ul className="space-y-4 text-[#898CA9]">
-              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link to="/newsletter" className="hover:text-white transition-colors">Newsletter</Link></li>
-              <li><Link to="/events" className="hover:text-white transition-colors">Events</Link></li>
-              <li><Link to="/help" className="hover:text-white transition-colors">Help center</Link></li>
-              <li><Link to="/tutorials" className="hover:text-white transition-colors">Tutorials</Link></li>
-            </ul>
-          </div>
-          
-          {/* Column 4 - Legal */}
-          <div className="space-y-6">
-            <h3 className="text-white font-bold text-lg">Legal</h3>
-            <ul className="space-y-4 text-[#898CA9]">
-              <li><Link to="/terms" className="hover:text-white transition-colors">Terms</Link></li>
-              <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link></li>
-              <li><Link to="/cookies" className="hover:text-white transition-colors">Cookies</Link></li>
-              <li><Link to="/licenses" className="hover:text-white transition-colors">Licenses</Link></li>
-              <li><Link to="/settings" className="hover:text-white transition-colors">Settings</Link></li>
+          {/* Column 3 - Contact */}
+          <div className="space-y-6 flex flex-col items-center md:items-start">
+            <h3 className="text-white font-bold text-lg">Contact</h3>
+            <ul className="space-y-4 text-[#e2e2e2] text-center md:text-left">
+              <li><a href="mailto:student@university.edu" className="hover:text-[#bc2424] transition-colors">student@university.edu</a></li>
+              <li><Link to="/about-team" className="hover:text-[#bc2424] transition-colors">About the Team</Link></li>
+              <li><a href="https://github.com/username/crimefinder" target="_blank" rel="noopener noreferrer" className="hover:text-[#bc2424] transition-colors">GitHub Repository</a></li>
             </ul>
           </div>
         </div>
         
-        <div className="border-t border-[#1A1B23] mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-[#898CA9]">© {new Date().getFullYear()} CrimeSafe. All rights reserved.</p>
-          <div className="flex space-x-6 mt-6 md:mt-0">
-            <a href="#" className="text-[#898CA9] hover:text-white transition-colors">
-              <span className="sr-only">Twitter</span>
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-              </svg>
-            </a>
-            <a href="#" className="text-[#898CA9] hover:text-white transition-colors">
+        <div className="border-t border-[#1c1c1c] mt-16 pt-8 flex flex-col md:flex-row justify-center md:justify-between items-center">
+          <p className="text-[#e2e2e2] text-center md:text-left">© {new Date().getFullYear()} CrimeFinder. Created for educational purposes only.</p>
+          <div className="flex space-x-6 mt-6 md:mt-0 justify-center">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-[#e2e2e2] hover:text-[#bc2424] transition-colors">
               <span className="sr-only">GitHub</span>
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-              </svg>
-            </a>
-            <a href="#" className="text-[#898CA9] hover:text-white transition-colors">
-              <span className="sr-only">Facebook</span>
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-              </svg>
-            </a>
-            <a href="#" className="text-[#898CA9] hover:text-white transition-colors">
-              <span className="sr-only">LinkedIn</span>
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
           </div>
